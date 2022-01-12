@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import Home from "./pages";
 import About from "./pages/about";
+import Contact from './pages/contact';
 import Menu from "./pages/menu";
 
 
@@ -28,16 +29,17 @@ function App() {
         }
     })
     return (
-        <div>
+        <>
             <NavBar toggle={toggle}/>
             <DropDown isOpen={isOpen} toggle={toggle}/>
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/menu" exact element={<Menu />} />
+                <Route path="/contact" exact element={<Contact />} />
                 <Route path="/about" exact element={<About />} />
             </Routes>
             <Footer />
-        </div>
+        </>
     );
 }
 

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Hero = () => {
     return (
-        <div className="bg-white h-screen flex flex-col justify-center items-center">
-            <h1 className="lg:text-9xl md:text-7xl sm:text-5xl text-4xl font-black mb-14">
+        <div className="bg-black h-screen flex flex-col justify-center items-center">
+            <h1 className="lg:text-9xl md:text-7xl sm:text-5xl text-4xl text-white font-black mb-14">
                 EGGCELENT
             </h1>
             <Link to="" className="sm:py-6 md:py-4 py-3 px-10 bg-yellow-500 rounded-full hover:bg-yellow-300 transition duration-300 ease-in-out flex items-center animate-bounce lg:text-4xl md:text-3xl sm:text-2xl">
@@ -23,6 +23,9 @@ const Hero = () => {
                     />
                 </svg>
             </Link>
+            <div className="text-white absolute bottom-0 right-0 p-10 text-xl animate-bounce">
+               Scroll &#8595;
+            </div>
         </div>
     )
 }
