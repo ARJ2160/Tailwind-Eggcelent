@@ -1,11 +1,12 @@
 import React, {useState, useEffect } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import DropDown from "./components/DropDown";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import Home from "./pages";
 import About from "./pages/about";
 import Menu from "./pages/menu";
+
 
 function App() {
     
@@ -30,11 +31,11 @@ function App() {
         <div>
             <NavBar toggle={toggle}/>
             <DropDown isOpen={isOpen} toggle={toggle}/>
-            <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/menu" exact component={Menu} />
-                <Route path="/about" exact component={About} />
-            </Switch>
+            <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route path="/menu" exact element={<Menu />} />
+                <Route path="/about" exact element={<About />} />
+            </Routes>
             <Footer />
         </div>
     );
